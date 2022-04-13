@@ -7,4 +7,4 @@ sudo tar -xf /mnt/cdrom/ArcGIS_Server_Linux_1061_164044.tar.gz -C /home/cfarris/
 
 # install ArcGIS Server
 echo Run ArcGIS Server Setup...
-sudo sh /home/cfarris/install/ArcGISServer/Setup -m silent -l Yes -a /mnt/cdrom/ArcGISGISServerAdvanced_ArcGISServer_1153083.prvc
+sh /home/cfarris/install/ArcGISServer/Setup -m silent -l Yes -a /mnt/cdrom/ArcGISGISServerAdvanced_ArcGISServer_1153083.prvc

@@ -1,26 +1,32 @@
 #!/bin/bash
 
 # update OS
-yum update -y
-yum upgrade -y
+echo Update OS...
+sudo yum update -y
+sudo yum upgrade -y
 
 # update install tools
-yum install nano -y
-yum install net-tools -y
+echo Update Installation Tools
+sudo yum install nano -y
+sudo yum install net-tools -y
 
 # open ports
-firewall-cmd --zone=public --add-port=80/tcp --permanent
-firewall-cmd --zone=public --add-port=8080/tcp --permanent
-firewall-cmd --reload
+echo Open Ports...
+sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload
 
 # install Tomcat
-yum install tomcat tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc -y
+echo Install Tomcat...
+sudo yum install tomcat tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc -y
 
 # start Tomcat
-systemctl stop httpd
-systemctl start tomcat
-systemctl enable tomcat
+echo Start Tomcat...
+sudo systemctl stop httpd
+sudo systemctl start tomcat
+sudo systemctl enable tomcat
 
 # mount CD-ROM
-mkdir /mnt/cdrom
-mount /dev/sr0 /mnt/cdrom
+echo Mount CD-ROM...
+sudo mkdir /mnt/cdrom
+sudo mount /dev/sr0 /mnt/cdrom

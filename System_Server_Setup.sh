@@ -18,6 +18,15 @@ sudo firewall-cmd --add-port=6006/tcp --zone=public --permanent
 sudo firewall-cmd --add-port=6080/tcp --zone=public --permanent
 sudo firewall-cmd --add-port=6099/tcp --zone=public --permanent
 sudo firewall-cmd --add-port=6443/tcp --zone=public --permanent
+# open ArcGIS DataStore ports
+sudo firewall-cmd --add-port=2443/tcp --zone=public --permanent
+# open ArcGIS Portal ports
+sudo firewall-cmd --add-port=7080/tcp --zone=public --permanent
+sudo firewall-cmd --add-port=7443/tcp --zone=public --permanent
+sudo firewall-cmd --add-port=7005/tcp --zone=public --permanent
+sudo firewall-cmd --add-port=7099/tcp --zone=public --permanent
+sudo firewall-cmd --add-port=7654/tcp --zone=public --permanent
+# reload firewall
 sudo firewall-cmd --reload
 
 # mount CD-ROM

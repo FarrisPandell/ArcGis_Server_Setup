@@ -10,7 +10,7 @@ echo Update Installation Tools
 sudo yum install nano -y
 sudo yum install net-tools -y
 
-# open ArcGIS Server ports
+# open ArcGIS Server, DataStore, and Portal ports
 echo Open Ports...
 sudo firewall-cmd --add-port=4003/tcp --zone=public --permanent
 sudo firewall-cmd --add-port=4004/tcp --zone=public --permanent

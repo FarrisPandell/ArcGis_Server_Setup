@@ -5,15 +5,15 @@ echo Update OS...
 sudo yum update -y
 sudo yum upgrade -y
 
-# update install tools
+# update installation tools
 echo Update Installation Tools
 sudo yum install nano -y
 sudo yum install net-tools -y
 
-# open ports
+# open ArcGIS Web Adaptor ports
 echo Open Ports...
-sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
-sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+sudo firewall-cmd --add-port=80/tcp --zone=public --permanent
+sudo firewall-cmd --add-port=8080/tcp --zone=public --permanent
 sudo firewall-cmd --reload
 
 # install Tomcat

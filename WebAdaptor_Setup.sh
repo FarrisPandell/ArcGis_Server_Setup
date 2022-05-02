@@ -7,4 +7,4 @@ sudo tar -xf /mnt/cdrom/ArcGIS_Web_Adaptor_Java_Linux_109_177888.tar.gz -C /home
 
 # install ArcGIS WebAdaptorc
 sh /home/cfarris/install/WebAdaptor/Setup -m silent -l Yes
-sudo cp /home/cfarris/arcgis/webadaptor10.9.0/java/arcgis.war /usr/share/tomcat/webapps/
+sudo cp /home/cfarris/arcgis/webadaptor10.9.0/java/arcgis.war /opt/tomcat/webapps/

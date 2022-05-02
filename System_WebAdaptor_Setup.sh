@@ -16,15 +16,26 @@ sudo firewall-cmd --add-port=80/tcp --zone=public --permanent
 sudo firewall-cmd --add-port=8080/tcp --zone=public --permanent
 sudo firewall-cmd --reload
 
-# install Tomcat
-echo Install Tomcat...
-sudo yum install tomcat tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc -y
+# install Java
+sudo yum install java-1.7.0-openjdk-devel
 
-# start Tomcat
-echo Start Tomcat...
-sudo systemctl stop httpd
-sudo systemctl start tomcat
-sudo systemctl enable tomcat
+# create Tomcat user
+sudo groupadd tomcat
+sudo useradd -M -s /bin/nologin -g tomcat -d /opt/tomcat tomcat
+
+# install Tomcat
+sudo yum install wget
+cd ~
+wget https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
+sudo mkdir /opt/tomcat
+sudo tar xvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
+
+# update permissions
+cd /opt/tomcat
+sudo chgrp -R tomcat /opt/tomcat
+sudo chmod -R g+r conf
+sudo chmod g+x conf
+sudo chown -R tomcat webapps/ work/ temp/ logs/
 
 # mount CD-ROM
 echo Mount CD-ROM...

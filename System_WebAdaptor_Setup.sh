@@ -38,7 +38,7 @@ sudo chmod g+x conf
 sudo chown -R tomcat webapps/ work/ temp/ logs/
 
 # install systemd unit file
-sudo cp /home/cfarris/ArcGIS_Setup/tomcat.service /etc/systemd/system/
+sudo cp /home/cfarris/ArcGis_Setup/tomcat.service /etc/systemd/system/
 
 # start Tomcat
 sudo systemctl daemon-reload

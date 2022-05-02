@@ -19,6 +19,9 @@ sudo firewall-cmd --reload
 # install Java
 sudo yum install java-1.7.0-openjdk-devel -y
 
+# Tomcat
+# https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-centos-7
+
 # create Tomcat user
 sudo groupadd tomcat
 sudo useradd -M -s /bin/nologin -g tomcat -d /opt/tomcat tomcat

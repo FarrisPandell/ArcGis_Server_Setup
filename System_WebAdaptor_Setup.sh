@@ -37,6 +37,15 @@ sudo chmod -R g+r conf
 sudo chmod g+x conf
 sudo chown -R tomcat webapps/ work/ temp/ logs/
 
+# install systemd unit file
+sudo cp /home/cfarris/ArcGIS_Setup/tomcat.service /etc/systemd/system/
+
+# start Tomcat
+sudo systemctl daemon-reload
+sudo systemctl start tomcat
+sudo systemctl status tomcat
+sudo systemctl enable tomcat
+
 # mount CD-ROM
 echo Mount CD-ROM...
 sudo mkdir /mnt/cdrom

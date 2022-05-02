@@ -17,16 +17,16 @@ sudo firewall-cmd --add-port=8080/tcp --zone=public --permanent
 sudo firewall-cmd --reload
 
 # install Java
-sudo yum install java-1.7.0-openjdk-devel
+sudo yum install java-1.7.0-openjdk-devel -y
 
 # create Tomcat user
 sudo groupadd tomcat
 sudo useradd -M -s /bin/nologin -g tomcat -d /opt/tomcat tomcat
 
 # install Tomcat
-sudo yum install wget
+sudo yum install wget -y
 cd ~
-wget https://www-eu.apache.org/dist/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz
+wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz
 sudo mkdir /opt/tomcat
 sudo tar xvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
 

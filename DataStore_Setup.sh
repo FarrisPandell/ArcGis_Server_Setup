@@ -3,7 +3,7 @@
 # unpack 
 echo Upack ArcGIS Server Installation...
 sudo mkdir /home/cfarris/install
-sudo tar -xf /mnt/cdrom/ArcGIS_DataStore_Linux_1081_175312.tar.gz -C /home/cfarris/install
+sudo tar -xf /mnt/cdrom/ArcGIS_DataStore_Linux_109_177887.tar.gz -C /home/cfarris/install
 
 # install ArcGIS Server
 echo Run ArcGIS Server Setup...

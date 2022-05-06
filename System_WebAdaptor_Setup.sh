@@ -19,13 +19,3 @@ sudo firewall-cmd --reload
 echo Mount CD-ROM...
 sudo mkdir /mnt/cdrom
 sudo mount /dev/sr0 /mnt/cdrom
-
-# install Tomcat
-cd /usr/local
-sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz
-sudo tar -xvf apache-tomcat-9.0.62.tar.gz
-sudo mv apache-tomcat-9.0.62 tomcat9
-
-echo "export CATALINA_HOME="/usr/local/tomcat9"" >> ~/.bashrc
-source ~/.bashrc
-sudo sh /usr/local/tomcat9/bin/startup.sh

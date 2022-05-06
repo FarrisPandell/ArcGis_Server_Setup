@@ -28,4 +28,4 @@ sudo mv apache-tomcat-9.0.62 tomcat9
 
 echo "export CATALINA_HOME="/usr/local/tomcat9"" >> ~/.bashrc
 source ~/.bashrc
-sudo sh /usr/local/tomcat9/bin startup.sh
+sudo sh /usr/local/tomcat9/bin/startup.sh

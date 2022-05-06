@@ -3,7 +3,6 @@
 # update OS
 echo Update OS...
 sudo yum update -y
-sudo yum upgrade -y
 
 # update installation tools
 echo Update Installation Tools

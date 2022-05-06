@@ -7,6 +7,7 @@ sudo yum update -y
 # update installation tools
 echo Update Installation Tools
 sudo yum install nano -y
+sudo yum install wget -y
 
 # open ArcGIS Web Adaptor ports
 echo Open Ports...

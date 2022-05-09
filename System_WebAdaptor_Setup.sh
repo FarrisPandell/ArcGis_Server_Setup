@@ -13,6 +13,7 @@ sudo yum install wget -y
 echo Open Ports...
 sudo firewall-cmd --add-port=80/tcp --zone=public --permanent
 sudo firewall-cmd --add-port=8080/tcp --zone=public --permanent
+sudo firewall-cmd --add-port=8443/tcp --zone=public --permanent
 sudo firewall-cmd --reload
 
 # mount CD-ROM

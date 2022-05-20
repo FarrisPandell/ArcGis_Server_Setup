@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# open ArcGIS DataStore ports
+echo Opening Ports...
+sudo firewall-cmd --add-port=2443/tcp --zone=public --permanent
+# reload firewall
+sudo firewall-cmd --reload
+
 # unpack 
 echo Upack ArcGIS Server Installation...
 sudo mkdir /home/cfarris/install

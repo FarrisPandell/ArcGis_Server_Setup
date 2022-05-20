@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# open ArcGIS Web Adaptor ports
+echo Opening Ports...
+# sudo firewall-cmd --add-port=80/tcp --zone=public --permanent
+# sudo firewall-cmd --add-port=443/tcp --zone=public --permanent
+# reload firewall
+sudo firewall-cmd --reload
+
 # unpack 
 echo Unpack Installation Media...
 sudo mkdir /home/cfarris/install

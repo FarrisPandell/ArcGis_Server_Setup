@@ -14,6 +14,6 @@ tar -xf /mnt/cdrom/apache-tomcat-9.0.63.tar.gz -C /home/cfarris
 mv apache-tomcat-9.0.63/ tomcat9
 
 # setup keystore with certificates
-keytool -genkey -alias tomcat -keyalg RSA -storepasswd changeit
-keytool -v -importkeystore -srckeystore /home/cfarris/Downloads/certificates/centos71.local.sleepingbearsystems.net.pfx -srcstoretype PKCS12 -alias centos71 -srckeypass changeit -destkeypass changeit
-keytool -v -importkeystore -srckeystore /home/cfarris/Downloads/certificates/centos72.local.sleepingbearsystems.net.pfx -srcstoretype PKCS12 -alias centos72 -srckeypass changeit -destkeypass changeit
+keytool -genkey -alias tomcat -keyalg RSA
+keytool -v -importkeystore -srckeystore /home/cfarris/Downloads/certificates/centos71.local.sleepingbearsystems.net.pfx -srcstoretype PKCS12 -alias centos71
+keytool -v -importkeystore -srckeystore /home/cfarris/Downloads/certificates/centos72.local.sleepingbearsystems.net.pfx -srcstoretype PKCS12 -alias centos72

@@ -7,6 +7,7 @@ sudo yum update -y
 # update installation tools
 echo Update Installation Tools
 sudo yum install nano -y
+sudo yum install java-1.8.0-openjdk-devel -y
 sudo yum install epel-release -y
 sudo yum install xrdp -y
 

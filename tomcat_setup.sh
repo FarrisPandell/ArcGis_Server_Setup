@@ -1,6 +1,3 @@
-# install Java
-sudo yum install java-1.8.0-openjdk-devel -y
-
 # open Tomcat ports
 echo Opening Ports...
 sudo firewall-cmd --add-port=8080/tcp --zone=public --permanent

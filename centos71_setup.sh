@@ -30,3 +30,10 @@ keytool -storepass changeit -genkey -alias tomcat -keyalg RSA -keypass changeit
 keytool -importkeystore -srckeystore /home/cfarris/.keystore -srcstorepass changeit -destkeystore /home/cfarris/.keystore -deststoretype pkcs12 -deststorepass changeit
 keytool -delete -alias tomcat -storepass changeit
 keytool -v -importkeystore -srckeystore /home/cfarris/certificates/centos71.local.sleepingbearsystems.net.pfx -srcstoretype PKCS12
+
+# sudo nano /et/security/limits.conf
+# cfarris soft nofile 65536
+# cfarris hard nofile 65536
+# cfarris soft nproc 65536
+# cfarris hard nproc 65536
+# save and logout to apply changes

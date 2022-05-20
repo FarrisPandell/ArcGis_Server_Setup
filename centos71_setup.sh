@@ -27,6 +27,6 @@ unzip /mnt/cdrom/certificates.zip -d /home/cfarris/certificates
 # setup keystore with certificates
 rm /home/cfarris/.keystore
 keytool -storepass changeit -genkey -alias tomcat -keyalg RSA -keypass changeit
-keytool -delete tomcat -storepass changeit
 keytool -importkeystore -srckeystore /home/cfarris/.keystore -srcstorepass changeit -destkeystore /home/cfarris/.keystore -deststoretype pkcs12 -deststorepass changeit
+keytool -delete -alias tomcat -storepass changeit
 keytool -v -importkeystore -srckeystore /home/cfarris/certificates/centos71.local.sleepingbearsystems.net.pfx -srcstoretype PKCS12

@@ -23,7 +23,7 @@ sudo systemctl enable xrdp
 sudo systemctl start xrdp
 
 # unzip certificates
-unzip /mnt/cdrom/certificates.zip -d /home/cfarris/certificates
+unzip /mnt/cdrom/certificates.zip -d /home/cfarris
 
 # setup keystore with certificates
 rm /home/cfarris/.keystore

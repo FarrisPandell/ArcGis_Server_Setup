@@ -16,7 +16,7 @@ sudo mkdir /mnt/cdrom
 sudo mount /dev/sr0 /mnt/cdrom
 
 # unzip certificates
-unzip /mnt/cdrom/certificates.zip -d /home/cfarris/certificates
+unzip /mnt/cdrom/certificates.zip -d /home/cfarris
 
 # setup keystore with certificates
 rm /home/cfarris/.keystore

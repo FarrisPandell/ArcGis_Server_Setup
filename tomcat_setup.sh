@@ -12,10 +12,3 @@ sudo firewall-cmd --reload
 cd /home/cfarris
 tar -xf /mnt/cdrom/apache-tomcat-9.0.63.tar.gz -C /home/cfarris
 mv apache-tomcat-9.0.63/ tomcat9
-
-# setup keystore with certificates
-rm /home/cfarris/.keystore
-keytool -storepass changeit -genkey -alias tomcat -keyalg RSA -keypass changeit
-keytool -importkeystore -srckeystore /home/cfarris/.keystore -srcstorepass changeit -destkeystore /home/cfarris/.keystore -deststoretype pkcs12 -deststorepass changeit
-keytool -v -importkeystore -srckeystore /home/cfarris/certificates/centos71.local.sleepingbearsystems.net.pfx -srcstoretype PKCS12 -alias centos71
-keytool -v -importkeystore -srckeystore /home/cfarris/certificates/centos72.local.sleepingbearsystems.net.pfx -srcstoretype PKCS12 -alias centos72

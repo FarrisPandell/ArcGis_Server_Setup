@@ -9,6 +9,7 @@ echo Update Installation Tools
 sudo yum install nano -y
 sudo yum install java-1.8.0-openjdk-devel -y
 sudo yum install unzip -y
+sudo yum install bind-utils -y
 
 # mount CD-ROM
 echo Mount CD-ROM...
